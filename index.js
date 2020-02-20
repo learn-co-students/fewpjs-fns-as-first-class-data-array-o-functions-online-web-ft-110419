@@ -27,11 +27,15 @@ const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashD
 
 
 
-function exerciseDog(dogName, dogBreed){
+/* function exerciseDog(dogName, dogBreed){
     let actions = [];
     let i;
     for (i = 0; i < routine.length; ++i) {
     actions.push(routine[i](dogName, dogBreed));
     }
     return actions
+} */
+
+function exerciseDog(dogName, dogBreed){
+   return routine.map(f => f(dogName, dogBreed));
 }
